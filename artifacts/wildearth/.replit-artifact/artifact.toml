@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/wildearth/"
+title = "WildEarth Pro – Safari Booking System"
+version = "1.0.0"
+id = "artifacts/wildearth"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/wildearth/" ]
+localPort = 22049
+
+[services.development]
+run = "pnpm --filter @workspace/wildearth run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/wildearth", "run", "build" ]
+publicDir = "artifacts/wildearth/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "22049"
+BASE_PATH = "/wildearth/"
