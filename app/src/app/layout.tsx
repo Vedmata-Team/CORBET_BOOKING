@@ -20,16 +20,15 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable} h-full antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        {/* Direct Link for Bootstrap Icons to ensure visibility */}
-        <link 
-          rel="stylesheet" 
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" 
-        />
+        <title>Neem Karoli Travellers</title>
+        <link rel="icon" href="https://vedmatawebdesigning.pythonanywhere.com/static/Neem_Karoli_Travellers.png" type="image/png" />
+        <link rel="apple-touch-icon" href="https://vedmatawebdesigning.pythonanywhere.com/static/Neem_Karoli_Travellers.png" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
       </head>
       <body className="min-h-full bg-slate-900 flex items-center justify-center p-0 m-0 overflow-hidden font-sans text-dark">
         
         {/* Force Mobile App Frame on Desktop */}
-        <div className="w-full max-w-[450px] h-screen bg-white shadow-[0_0_100px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col">
+        <div className="w-full max-w-[450px] h-[100dvh] bg-white shadow-[0_0_100px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col">
           
           {/* Main Content Area */}
           <div className="flex-1 relative flex flex-col bg-white overflow-hidden min-h-0">
