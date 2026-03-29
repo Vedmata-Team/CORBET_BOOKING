@@ -16,7 +16,7 @@ export default function MobileNav() {
   const pathname = usePathname();
 
   return (
-    <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-100 px-4 pb-8 pt-4 z-[90] shadow-[0_-5px_20px_rgba(0,0,0,0.03)] font-poppins">
+    <div className="relative bg-white border-t border-gray-100 px-4 pt-4 z-[90] shadow-[0_-5px_20px_rgba(0,0,0,0.03)] font-poppins" style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}>
       <div className="flex items-center justify-around max-w-md mx-auto relative cursor-pointer">
         {navItems.map((item) => {
           const isActive = pathname === item.href || (item.name === 'Home' && pathname === '/');

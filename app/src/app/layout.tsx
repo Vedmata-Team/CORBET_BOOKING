@@ -19,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} h-full antialiased`}>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         {/* Direct Link for Bootstrap Icons to ensure visibility */}
         <link 
           rel="stylesheet" 
@@ -31,7 +32,7 @@ export default function RootLayout({
         <div className="w-full max-w-[450px] h-screen bg-white shadow-[0_0_100px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col">
           
           {/* Main Content Area */}
-          <div className="flex-1 relative flex flex-col h-full bg-white overflow-hidden">
+          <div className="flex-1 relative flex flex-col bg-white overflow-hidden min-h-0">
              {children}
           </div>
 
